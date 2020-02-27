@@ -1,0 +1,147 @@
+
+
+
+
+  
+
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened style="width: 500px; background-color: #343232;">
+        <div > 
+        <button mat-icon-button matTooltip="Switch Apps">
+           
+            <i class="material-icons">
+                folder
+                </i>
+         <span style="color: #7D7D7D;">   Dossier </span> 
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button matTooltip="Notifications">
+            <i class="material-icons">
+                compare_arrows
+                </i>
+            <span style="color: #7D7D7D;">    Planing et Reservation </span> 
+           
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button matTooltip="My Account">
+            <i class="material-icons">
+                shop
+                </i>
+            <span style="color: #7D7D7D;">    Caisse </span> 
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button matTooltip="My Account">
+            <mat-icon>account_circle</mat-icon>
+            <span style="color: #7D7D7D;">    Stock et ivnetaire </span> 
+        </button>
+    </div>
+    <div>
+        <button mat-icon-button matTooltip="My Account">
+            <i class="material-icons">
+                trending_up
+                </i>
+        <span style="color: #7D7D7D;">statistique</span> 
+        </button>
+    </div>
+    </mat-drawer>
+    <mat-drawer-content style="background-color: #EFEFEF;">Main content
+        <mat-toolbar color="accent">
+            <button mat-icon-button matTooltip="Application Menu" (click)="sidenav.toggle()">
+              
+            </button>
+            <span style="color: #EFEFEF;">Dossier Client</span> 
+            <span style="flex: 1 1 auto;"></span>
+            <div>
+              
+                <button mat-icon-button matTooltip="My Account">
+                    <i class="material-icons">
+                        search
+                        </i>
+                </button>
+              
+            </div>
+            
+          </mat-toolbar>
+          <ul>
+            <li><a href="#">FicheClient</a></li>
+            <li><a href="#">Documents </a></li>
+            <li><a href="#">Factures </a></li>
+            <li><a href="#">Visites </a></li>
+            <li><a routerlink="list"> Abonnments </a></li>
+          </ul>
+        
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+            <!-- Position Column -->
+        
+            <ng-container matColumnDef="nom">
+              <th mat-header-cell *matHeaderCellDef> Nom </th>
+              <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+            </ng-container>
+          
+            
+            <ng-container matColumnDef="prenom">
+              <th mat-header-cell *matHeaderCellDef> nom </th>
+              <td mat-cell *matCellDef="let element"> {{element.prenom}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="statuClient">
+              <th mat-header-cell *matHeaderCellDef> Sattus </th>
+              <td mat-cell *matCellDef="let element"> {{element.statuClient}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="photoClient">
+                <th mat-header-cell *matHeaderCellDef> tele </th>
+                <td mat-cell *matCellDef="let element"> {{element.photoClient}} </td>
+              </ng-container>
+          
+            <ng-container matColumnDef="tele">
+              <th mat-header-cell *matHeaderCellDef> filler </th>
+              <td mat-cell *matCellDef="let element"> {{element.tele}} </td>
+            </ng-container>
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef> Address </th>
+                <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+              </ng-container>
+        
+              <ng-container matColumnDef="addressClient">
+                <th mat-header-cell *matHeaderCellDef> Address </th>
+                <td mat-cell *matCellDef="let element"> {{element.addressClient}} </td>
+              </ng-container>
+                
+              <ng-container matColumnDef="villclient">
+                <th mat-header-cell *matHeaderCellDef> Ville </th>
+                <td mat-cell *matCellDef="let element"> {{element.villclient}} </td>
+              </ng-container>
+        
+              <ng-container matColumnDef="access">
+                <th mat-header-cell *matHeaderCellDef> access </th>
+                <td mat-cell *matCellDef="let element"> {{element.access}} </td>
+              </ng-container>
+        
+           
+        
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef> action </th>
+                <td mat-cell   *matCellDef="let row"> 
+                <button mat-icon-button (click)="onEdit(row)" ><mat-icon>launch</mat-icon></button>
+                <button mat-icon-button (click)="onDelete(row.id)"  color="warn"><mat-icon>delete_outline</mat-icon></button>
+                  
+                </td>
+                
+              </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        
+    </mat-drawer-content>
+   
+  </mat-drawer-container>
+
+  

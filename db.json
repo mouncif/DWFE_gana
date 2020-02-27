@@ -1,0 +1,15 @@
+{
+  "clients": [
+    {
+      "id": "null",
+      "nomClient": "hhhhhhhhh",
+      "prenomClient": "hhhh",
+      "statuClient": "",
+      "photoClient": "45454",
+      "tele": "ssssss",
+      "addressClient": "sssss",
+      "villclient": "sss",
+      "access": true
+    }
+  ]
+}

@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+div.container{
+ margin: 0px 40px;
+}
+.fill-remaining-space {
+ /* This fills the remaining space, by using flexbox.
+ Every toolbar row uses a flexbox row layout. */
+ flex: 1 1 auto;
+ }
+ form.normal-form{
+ margin: 10px;
+}
+.controles-container{
+ width: 100%;
+ padding: 5%;
+}
+.controles-container > * {
+ width: 100%;
+ }
+ .add-bottom-padding{
+ padding-bottom: 10px;
+ }
+ /* radio group */
+mat-radio-group mat-radio-button{
+ margin-left: 5px;
+}
+.button-row button{
+ margin: 5px;
+}
+
+.example-container {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  border: 1px solid #555;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+.mat-drawer-inner-container{
+    width: 560px;
+}
+.mat-toolbar.mat-accent {
+    background: #FFAA56;
+    color: #fff;
+}
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/grid';
