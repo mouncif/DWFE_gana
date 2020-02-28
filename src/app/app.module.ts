@@ -9,12 +9,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ServicesService} from './shared/services.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ListclientsComponent } from './listclients/listclients.component';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './views/header/header.component';
+import { ContentComponent } from './views/content/content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
-    ListclientsComponent
+    ListclientsComponent,
+    HeaderComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,8 @@ import { ListclientsComponent } from './listclients/listclients.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [ServicesService],
   bootstrap: [AppComponent]

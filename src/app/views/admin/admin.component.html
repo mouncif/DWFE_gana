@@ -1,74 +1,9 @@
 
 
-<mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened style="width: 500px; background-color: #343232;">
-        <div > 
-        <button mat-icon-button matTooltip="Switch Apps">
-           
-            <i class="material-icons">
-                folder
-                </i>
-         <span style="color: #7D7D7D;">   Dossier </span> 
-        </button>
-    </div>
-    <div>
-        <button mat-icon-button matTooltip="Notifications">
-            <i class="material-icons">
-                compare_arrows
-                </i>
-            <span style="color: #7D7D7D;">    Planing et Reservation </span> 
-           
-        </button>
-    </div>
-    <div>
-        <button mat-icon-button matTooltip="My Account">
-            <i class="material-icons">
-                shop
-                </i>
-            <span style="color: #7D7D7D;">    Caisse </span> 
-        </button>
-    </div>
-    <div>
-        <button mat-icon-button matTooltip="My Account">
-            <mat-icon>account_circle</mat-icon>
-            <span style="color: #7D7D7D;">    Stock et ivnetaire </span> 
-        </button>
-    </div>
-    <div>
-        <button mat-icon-button matTooltip="My Account">
-            <i class="material-icons">
-                trending_up
-                </i>
-        <span style="color: #7D7D7D;">statistique</span> 
-        </button>
-    </div>
-    </mat-drawer>
-    <mat-drawer-content style="background-color: #EFEFEF;">
-        <mat-toolbar color="accent">
-            <button mat-icon-button matTooltip="Application Menu" (click)="sidenav.toggle()">
-              
-            </button>
-            <span style="color: #EFEFEF;">Dossier Client</span> 
-            <span style="flex: 1 1 auto;"></span>
-            <div>
-              
-                <button mat-icon-button matTooltip="My Account">
-                    <i class="material-icons">
-                        search
-                        </i>
-                </button>
-              
-            </div>
-            
-          </mat-toolbar>
-          <ul>
-            <li><a href="#">FicheClient</a></li>
-            <li><a href="#">Documents </a></li>
-            <li><a href="#">Factures </a></li>
-            <li><a href="#">Visites </a></li>
-            <li><a routerLink="/list"> Abonnments </a></li>
-          </ul>
-          <div> 
+
+   
+  
+      
 
             <form [formGroup]="service.form" class="normal-form" (submit)="add()">
                 <mat-grid-list cols="2" rowHeight="300px">
@@ -85,21 +20,29 @@
                                 
                             
                             </mat-form-field>
-                          
+                        
+                            <mat-form-field>  <input formControlName="email" matInput placeholder="Email"> </mat-form-field>
                             <mat-form-field>
-                                <input formControlName="photoClient" matInput placeholder="Fillier">
+                                <input formControlName="photoClient" matInput placeholder="photo">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input formControlName="statuClient" matInput placeholder="Status">
+                                
+                            
                             </mat-form-field>
                         </div>
                     </mat-grid-tile>
                     <mat-grid-tile>
                         <div class="controles-container">
+                         
 
                             <mat-form-field>  <input formControlName="tele" matInput placeholder="Tele"> </mat-form-field>
+                           
                             <mat-form-field>   <input formControlName="addressClient" matInput placeholder="Adress"></mat-form-field>
                           
                             <mat-form-field> <input formControlName="villclient" matInput placeholder="Ville"> </mat-form-field>
                                
-                                    
+                        
                                     
                             
                             <div class="add-bottom-padding">
@@ -113,11 +56,10 @@
                     </mat-grid-tile>
                 </mat-grid-list>
             </form>
-         </div>
-
-    </mat-drawer-content>
-    
-    
-  </mat-drawer-container>
+      
 
   
+    
+    
+
+

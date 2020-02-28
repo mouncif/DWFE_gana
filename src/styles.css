@@ -31,11 +31,15 @@ mat-radio-group mat-radio-button{
 .button-row button{
  margin: 5px;
 }
+.top{
+  margin-top: 50px;
+ 
+}
 
 .example-container {
   width: 100%;
   height: 100%;
-  margin: 10px;
+  
   border: 1px solid #555;
 }
 ul {
@@ -67,7 +71,7 @@ ul {
     width: 560px;
 }
 .mat-toolbar.mat-accent {
-    background: #FFAA56;
+    background:#994d00;
     color: #fff;
 }
 

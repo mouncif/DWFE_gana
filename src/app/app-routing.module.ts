@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AdminComponent } from './views/admin/admin.component';
+import {ContentComponent} from "./views/content/content.component"
 import { ListclientsComponent } from './listclients/listclients.component';
+import { AdminComponent } from './views/admin/admin.component';
+
 
 const routes: Routes = [
-  {path:"clients",component:AdminComponent},
+ 
+  {path:"",component:AdminComponent},
   {path :"list", component:ListclientsComponent }
 ];
 

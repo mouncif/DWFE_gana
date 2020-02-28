@@ -4,6 +4,8 @@ import {ServicesService} from "./../shared/services.service";
 import {client} from "./../model/client"
 import {Router} from "@angular/router"
 
+
+
 @Component({
   selector: 'app-listclients',
   templateUrl: './listclients.component.html',
@@ -11,15 +13,16 @@ import {Router} from "@angular/router"
 })
 export class ListclientsComponent implements OnInit {
 
-  displayedColumns: string[] = ['nom', 'prenom', 'statuClient', 'photoClient','tele','email','addressClient','villclient','access','action'];
+  displayedColumns: string[] = [ 'photoClient','nom', 'prenom', 'statuClient','tele','email','addressClient','villclient','access','action'];
   dataSource = new MatTableDataSource<client>();
 
-  constructor(private service : ServicesService,private rout:Router) {
+  constructor(public service : ServicesService,private rout:Router) {
     this.fetchElements();
 
    }
 
   ngOnInit() {
+    this.fetchElements();
   }
   fetchElements()
   {
@@ -27,7 +30,7 @@ export class ListclientsComponent implements OnInit {
   }
   onEdit(row){
     this.service.populateForm(row);
-    this.rout.navigateByUrl("/");
+    this.rout.navigateByUrl("/clients");
   }
   onDelete(rowid){
     if(confirm("Sure ? ")){

@@ -37,10 +37,19 @@ export class AdminComponent implements OnInit {
     add(){
      
   
-       
+     
+
          this.client = this.service.form.value;
-         
-           this.ajouter();
+
+         if(this.client.id==null){
+          
+         this.ajouter();
+         this.router.navigateByUrl("/list");
+        }else{
+        
+          this.misajour(this.client);
+        }
+    
          
        
        
@@ -50,7 +59,7 @@ export class AdminComponent implements OnInit {
     
     misajour(client){
     this.service.update(client).subscribe(() => console.log("seccesee updated"));
-    this.router.navigateByUrl('/clients');
+  
     }
     
     

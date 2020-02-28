@@ -10,12 +10,13 @@ export class ServicesService {
 
   constructor(public clientHTTP:HttpClient) { }
   form : FormGroup = new FormGroup({
-    id : new FormControl('null'),
-    nomClient : new FormControl('',Validators.minLength(8)),
+    id : new FormControl(null),
+    nomClient : new FormControl(''),
     prenomClient : new FormControl('',Validators.required),
     statuClient : new FormControl('',Validators.required),
     photoClient : new FormControl(''),
     tele : new FormControl('',Validators.required),
+    email : new FormControl(''),
     addressClient : new FormControl(''),
     villclient :  new FormControl(''),
     access : new FormControl(false)

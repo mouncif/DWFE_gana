@@ -1,14 +1,15 @@
 {
   "clients": [
     {
-      "id": "null",
-      "nomClient": "hhhhhhhhh",
-      "prenomClient": "hhhh",
+      "id": 2,
+      "nomClient": "ELGANA",
+      "prenomClient": "Youssef",
       "statuClient": "",
-      "photoClient": "45454",
-      "tele": "ssssss",
-      "addressClient": "sssss",
-      "villclient": "sss",
+      "photoClient": "https://cdn.icon-icons.com/icons2/632/PNG/512/user_icon-icons.com_57997.png",
+      "tele": "06598985959",
+      "email": "elganayoussef@gmail.com",
+      "addressClient": "elganaoussef@gmail.com",
+      "villclient": "Safi ",
       "access": true
     }
   ]
