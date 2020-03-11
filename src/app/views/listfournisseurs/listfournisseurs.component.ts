@@ -30,7 +30,7 @@ export class ListfournisseursComponent implements OnInit {
     this.rout.navigateByUrl("/fournisseur");
   }
   onDelete(rowid){
-    if(confirm("Sure ? ")){
+    if(confirm("Suure  ? ")){
       this.service.delete(rowid).subscribe(()=>{
        
         this.fetchElements();
