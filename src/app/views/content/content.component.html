@@ -30,44 +30,45 @@
       
     </mat-toolbar>
     </header>
+
+   
+
+    
     <mat-drawer-container class="example-container">
+        
         <mat-drawer mode="side" opened style="width: 300px; background-color: #343232;">
             <br> 
-            <div class="top"> 
-                <a routerLink="">   
-            <button mat-icon-button matTooltip="Switch Apps">
-                <i class="material-icons" style="color: aqua;">
-                    add
-                    </i>
-            
-             <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">Clients</span> 
-            </button>
+          
+        
+        <button  style="width: 100%; background: brown; font-size: 20px; color: cornsilk;" mat-button [matMenuTriggerFor]="belowMenu">Add</button>
+<mat-menu #belowMenu="matMenu" yPosition="below"  >
+    <a routerLink="">   
+        <button mat-menu-item  style="">
+            <i class="material-icons" style="color: aqua;">
+                add
+                </i>
+        
+         <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">Clients</span> 
+        </button>
+    </a>
+    <a routerLink="/produit">   
+        <button mat-menu-item>
+            <i class="material-icons" style="color: aqua;">
+                add
+                </i>
+            <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">Produits</span> 
+           
+        </button>
         </a>
-        </div>
-        <br> 
-        <div>
-            <a routerLink="/produit">   
-            <button mat-icon-button matTooltip="Notifications">
-                <i class="material-icons" style="color: aqua;">
-                    add
-                    </i>
-                <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">Produits</span> 
-               
-            </button>
-            </a>
-        </div>
-        <br> 
-        <div>
-            <a routerLink="/fournisseur">   
-            <button mat-icon-button matTooltip="My Account">
+        <a routerLink="/fournisseur">   
+            <button mat-menu-item>
                 <i class="material-icons" style="color: aqua;">
                     add
                     </i>
                 <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">Fournisseurs</span> 
             </button>
         </a>
-        </div>
-        <br> 
+</mat-menu>
     
         </mat-drawer>
         <mat-drawer-content style="background-color: #EFEFEF;">
@@ -75,7 +76,7 @@
                 <button mat-icon-button matTooltip="Application Menu" >
                   
                 </button>
-                <span style="color: #EFEFEF; ">Dossier Client</span> 
+                <span style="color: #EFEFEF; ">Listes de Ventes</span> 
                 <span style="flex: 1 1 auto;"></span>
                 <div>
                   

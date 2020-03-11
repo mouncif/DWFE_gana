@@ -12,5 +12,9 @@ form.normal-form {
 
 .button {
     position: absolute;
-    top: 50%;
+    top: 50%
+    ;
 }
+ .test{
+    width: 90%;
+ }
