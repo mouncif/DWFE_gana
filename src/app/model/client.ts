@@ -8,5 +8,5 @@ export interface client{
     email : string ;
     addressClient : string;
     villclient : string;
-    access : boolean; 
+    access : string; 
 }

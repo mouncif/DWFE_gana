@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
-import {ServicesService} from "./../shared/services.service";
-import {client} from "./../model/client"
+import {ServicesService} from "../../shared/services.service";
+import {client} from "../../model/client"
 import {Router} from "@angular/router"
 
 
@@ -30,7 +30,7 @@ export class ListclientsComponent implements OnInit {
   }
   onEdit(row){
     this.service.populateForm(row);
-    this.rout.navigateByUrl("/clients");
+    this.rout.navigateByUrl("/");
   }
   onDelete(rowid){
     if(confirm("Sure ? ")){

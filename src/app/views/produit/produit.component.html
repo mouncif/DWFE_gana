@@ -11,22 +11,22 @@
                         <div class="controles-container">
                             <input type="hidden" formControlName="id">
                             <mat-form-field>
-                                <input formControlName="nomClient" matInput placeholder="Nom"/>
+                                <input formControlName="nomP" matInput placeholder="Nom Produit"/>
                               
                                
                             </mat-form-field>
                             <mat-form-field>
-                                <input formControlName="prenomClient" matInput placeholder="Prenom">
+                                <input formControlName="nomCP" matInput placeholder="Nom Court de Produit">
                                 
                             
                             </mat-form-field>
                         
-                            <mat-form-field>  <input formControlName="email" matInput placeholder="Email"> </mat-form-field>
+                            <mat-form-field>  <input formControlName="prixBase" matInput placeholder="Prix de base"> </mat-form-field>
                             <mat-form-field>
-                                <input formControlName="photoClient"  matInput placeholder="photo">
+                                <input formControlName="prixVente"  matInput placeholder="Prix de vente">
                             </mat-form-field>
                             <mat-form-field>
-                                <input formControlName="statuClient" matInput placeholder="Status">
+                                <input formControlName="seuilMax" matInput placeholder="Seuil Max ">
                                 
                             
                             </mat-form-field>
@@ -36,33 +36,28 @@
                         <div class="controles-container">
                          
 
-                            <mat-form-field>  <input formControlName="tele" matInput placeholder="Tele"> </mat-form-field>
+                            <mat-form-field>  <input formControlName="unite" matInput placeholder="Unite"> </mat-form-field>
                            
-                            <mat-form-field>   <input formControlName="addressClient" matInput placeholder="Adress"></mat-form-field>
+                            <mat-form-field>   <input formControlName="imageP" matInput placeholder="Image de produit"></mat-form-field>
                           
-                            <mat-form-field> <input formControlName="villclient" matInput placeholder="Ville"> </mat-form-field>
+                            <mat-form-field> <input formControlName="qteInitial" matInput placeholder="Quantité initial"> </mat-form-field>
                                
                         
                             <mat-form-field> 
                             
-                            <mat-select formControlName="access" placeholder="access">
-                                <mat-option>None</mat-option>
-                                <ng-container *ngFor="let acces of accesses">
-                                    <mat-option value="{{acces.value}}">{{acces.value}}</mat-option>
-                                </ng-container>
-                            </mat-select>
-                        </mat-form-field>
+                                <input formControlName="qteActual" matInput placeholder="Quantité Actual">
+                             </mat-form-field>
+                              
+                 
                             <div class="button-row">
                                 <button mat-raised-button color="primary" type="submit" >Submit</button>
-                            
+                  
                             </div>
                         </div>
                     </mat-grid-tile>
                 </mat-grid-list>
-               
             </form>
             <button style="margin-left: 1700px; height: 50px; width: 60px;" mat-raised-button color="warn" (click)="onClear()">Clear</button>
-          
 
   
     

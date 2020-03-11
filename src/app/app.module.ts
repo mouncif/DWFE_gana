@@ -8,10 +8,14 @@ import { AdminComponent } from './views/admin/admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ServicesService} from './shared/services.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ListclientsComponent } from './listclients/listclients.component';
+import { ListclientsComponent } from './views/listclients/listclients.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './views/header/header.component';
 import { ContentComponent } from './views/content/content.component';
+import { ProduitComponent } from './views/produit/produit.component';
+import { ListproduitsComponent } from './views/listproduits/listproduits.component';
+import { FournisseurComponent } from './views/fournisseur/fournisseur.component';
+import { ListfournisseursComponent } from './views/listfournisseurs/listfournisseurs.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { ContentComponent } from './views/content/content.component';
     AdminComponent,
     ListclientsComponent,
     HeaderComponent,
-    ContentComponent
+    ContentComponent,
+    ProduitComponent,
+    ListproduitsComponent,
+    FournisseurComponent,
+    ListfournisseursComponent
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,7 @@ export class ServicesService {
     email : new FormControl(''),
     addressClient : new FormControl(''),
     villclient :  new FormControl(''),
-    access : new FormControl(false)
+    access : new FormControl('')
 
   });
 
@@ -54,9 +54,10 @@ initializeFormGroup() {
     statuClient: '',
     photoClient: '',
     tele: '',
+    email :'',
     addressClient : '',
     villclient :'',
-    access: false,
+    access: '',
   
   });
 }

@@ -22,8 +22,7 @@ export class AdminComponent implements OnInit {
     email :'',
     addressClient : '',
     villclient : '',
-
-    access :false
+    access :''
     
     }
   
@@ -35,12 +34,8 @@ export class AdminComponent implements OnInit {
       this.service.ajouter(this.client).subscribe((client)=>this.clients=[client,...this.clients]);
     }
     add(){
-     
-  
-     
-
-         this.client = this.service.form.value;
-
+      console.log('Why I m here ? ');
+      this.client = this.service.form.value;
          if(this.client.id==null){
           
          this.ajouter();
@@ -48,6 +43,7 @@ export class AdminComponent implements OnInit {
         }else{
         
           this.misajour(this.client);
+          this.router.navigateByUrl("/list");
         }
     
          
@@ -56,13 +52,21 @@ export class AdminComponent implements OnInit {
        
     
     }
+    accesses = [
+      { id: 3, value: 'User' },
+      { id: 2, value: 'Editor' },
+      { id: 3, value: 'Admin' }];
     
     misajour(client){
     this.service.update(client).subscribe(() => console.log("seccesee updated"));
   
     }
     
-    
+    onClear(){
+      this.service.initializeFormGroup();
+      console.log('Clicked');
+      this.service.form.reset();
+      }
     
       ngOnInit() {
       }

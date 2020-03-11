@@ -34,50 +34,41 @@
         <mat-drawer mode="side" opened style="width: 300px; background-color: #343232;">
             <br> 
             <div class="top"> 
+                <a routerLink="">   
             <button mat-icon-button matTooltip="Switch Apps">
-               
                 <i class="material-icons" style="color: aqua;">
-                    folder
+                    add
                     </i>
-             <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">   Dossier </span> 
+            
+             <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">Clients</span> 
             </button>
+        </a>
         </div>
         <br> 
         <div>
+            <a routerLink="/produit">   
             <button mat-icon-button matTooltip="Notifications">
                 <i class="material-icons" style="color: aqua;">
-                    compare_arrows
+                    add
                     </i>
-                <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">    Planing et Reservation </span> 
+                <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">Produits</span> 
                
             </button>
+            </a>
         </div>
         <br> 
         <div>
+            <a routerLink="/fournisseur">   
             <button mat-icon-button matTooltip="My Account">
                 <i class="material-icons" style="color: aqua;">
-                    shop
+                    add
                     </i>
-                <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">    Caisse </span> 
+                <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">Fournisseurs</span> 
             </button>
+        </a>
         </div>
         <br> 
-        <div>
-            <button mat-icon-button matTooltip="My Account">
-                <mat-icon style="color: aqua;">account_circle</mat-icon>
-                <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">    Stock et ivnetaire </span> 
-            </button>
-        </div>
-        <br> 
-        <div>
-            <button mat-icon-button matTooltip="My Account">
-                <i class="material-icons" style="color: aqua;">
-                    trending_up
-                    </i>
-            <span style="color: #7D7D7D; font-size : 20px; color: #EFEFEF;">statistique</span> 
-            </button>
-        </div>
-        <br> 
+    
         </mat-drawer>
         <mat-drawer-content style="background-color: #EFEFEF;">
             <mat-toolbar color="accent" style="height: 120px;">
@@ -98,10 +89,42 @@
                 
               </mat-toolbar>
               <ul>
-                <li><a routerLink="">FicheClient</a></li>
-                <li><a >Produits </a></li>
-                <li><a >Fournisseurs</a></li>
-                <li><a routerLink="/list"> Clients </a></li>
+                <li>  <a routerLink="/list">   
+            <button mat-raised-button  >
+                
+                <i class="material-icons">
+                    list
+                    </i>
+                <span style=" font-size : 15px; color: #000000;"> List Clients</span> 
+               
+            </button>
+     
+                </a></li>
+                <li>  <a routerLink="/listproduit">   
+                    <button  mat-raised-button  >
+                        
+                        <i class="material-icons">
+                            list
+                            </i>
+                        <span style=" font-size : 15px; color:#000000;"> List Porduits</span> 
+                       
+                    </button>
+             
+                        </a></li>
+                        <li>  <a routerLink="/listfournisseur">    
+                            <button  mat-raised-button  >
+                                
+                                <i class="material-icons">
+                                    list
+                                    </i>
+                                <span style=" font-size : 15px; color:#000000;"> List Fournisseurs</span> 
+                               
+                            </button>
+                     
+                                </a></li>
+
+                        
+              
               </ul>
               <router-outlet></router-outlet>
        </mat-drawer-content>

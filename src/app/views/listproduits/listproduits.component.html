@@ -1,0 +1,80 @@
+<mat-drawer-container class="example-container">
+
+    <mat-drawer-content style="background-color: #EFEFEF;">
+
+        
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="imageP">
+                <th mat-header-cell *matHeaderCellDef> Photo </th>
+            
+                <td mat-cell *matCellDef="let element"> <img [src]="element.imageP" height="55px"/> </td>
+          
+              </ng-container>
+  
+            <!-- Position Column -->
+        
+            <ng-container matColumnDef="nomP">
+              <th mat-header-cell *matHeaderCellDef> Nom </th>
+              <td mat-cell *matCellDef="let element"> {{element.nomP}} </td>
+            </ng-container>
+          
+            
+            <ng-container matColumnDef="nomCP">
+              <th mat-header-cell *matHeaderCellDef> Prenom </th>
+              <td mat-cell *matCellDef="let element"> {{element.nomCP}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="prixBase">
+              <th mat-header-cell *matHeaderCellDef> Sattus </th>
+              <td mat-cell *matCellDef="let element"> {{element.prixBase}} </td>
+            </ng-container>
+          
+          
+          
+            <ng-container matColumnDef="prixVente">
+              <th mat-header-cell *matHeaderCellDef> Tele </th>
+              <td mat-cell *matCellDef="let element"> {{element.prixVente}} </td>
+            </ng-container>
+            <ng-container matColumnDef="seuilMax">
+                <th mat-header-cell *matHeaderCellDef> Email </th>
+                <td mat-cell *matCellDef="let element"> {{element.seuilMax}} </td>
+              </ng-container>
+        
+              <ng-container matColumnDef="unite">
+                <th mat-header-cell *matHeaderCellDef> Address </th>
+                <td mat-cell *matCellDef="let element"> {{element.unite}} </td>
+              </ng-container>
+                
+              <ng-container matColumnDef="qteInitial">
+                <th mat-header-cell *matHeaderCellDef> Ville </th>
+                <td mat-cell *matCellDef="let element"> {{element.qteInitial}} </td>
+              </ng-container>
+        
+              <ng-container matColumnDef="qteActual">
+                <th mat-header-cell *matHeaderCellDef> access </th>
+                <td mat-cell *matCellDef="let element"> {{element.qteActual}} </td>
+              </ng-container>
+        
+           
+        
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef> action </th>
+                <td mat-cell   *matCellDef="let row"> 
+                <button mat-icon-button (click)="onEdit(row)" ><mat-icon>launch</mat-icon></button>
+                <button mat-icon-button (click)="onDelete(row.id)"  color="warn"><mat-icon>delete_outline</mat-icon></button>
+                  
+                </td>
+                
+              </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        
+    </mat-drawer-content>
+   
+  </mat-drawer-container>
+
+  
